@@ -59,6 +59,7 @@ public class CaptchaValidateFilter extends AccessControlFilter
 
     public boolean validateResponse(HttpServletRequest request, String validateCode)
     {
+        System.out.println( request.getSession().getAttribute(Constants.KAPTCHA_SESSION_KEY));
         Object obj = ShiroUtils.getSession().getAttribute(Constants.KAPTCHA_SESSION_KEY);
         String code = String.valueOf(obj != null ? obj : "");
         if (StringUtils.isEmpty(validateCode) || !validateCode.equalsIgnoreCase(code))

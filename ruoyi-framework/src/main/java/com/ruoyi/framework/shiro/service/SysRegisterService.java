@@ -37,7 +37,7 @@ public class SysRegisterService
 
         if (!StringUtils.isEmpty(ServletUtils.getRequest().getAttribute(ShiroConstants.CURRENT_CAPTCHA)))
         {
-            msg = "验证码错误";
+            msg = "验证码错误1";
         }
         else if (StringUtils.isEmpty(username))
         {
